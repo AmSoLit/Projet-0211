@@ -52,16 +52,17 @@ def rows_columns (path) :
 def info_sepal_length (path):
     try:
         dataframe = pandas.read_csv(path, sep =',|","', quotechar='"', index_col = 0, engine = 'python')
-        max_sepal_length = dataframe['Sepal.Length'].max()
-        min_sepal_length = dataframe['Sepal.Length'].min()
-        avg_sepal_length = dataframe['Sepal.Length'].mean()
-        print('Max Sepal.Length ' + str(max_sepal_length))
-        print('Min Sepal.Length ' + str(min_sepal_length))
-        print('Average Sepal.Length ' + str(avg_sepal_length))
-
+       
+        #min_sepal_length = dataframe['Sepal.Length'].min()
+        #avg_sepal_length = dataframe['Sepal.Length'].mean()
+        #print('Max Sepal.Length ' + str(max_sepal_length))
+        #print('Min Sepal.Length ' + str(min_sepal_length))
+        #print('Average Sepal.Length ' + str(avg_sepal_length))
         
     except (e) :
         print(e)
+
+    max_sepal_length = dataframe['Sepal.Length'].max()
 
 #retourne le nombre de colonne
 def nombre_colonnes (path):
