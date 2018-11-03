@@ -3,6 +3,7 @@ from LogGenerator import *
 from Data import *
 
 def main ():
+
     
     print(""" Bonjour ! N'oubliez pas de doubler les antislash dans le chemin du fichier. \n""")
     
@@ -61,12 +62,12 @@ def main ():
     print(nbr_quan + " : ")
 
     #plot etc...
+
     
     for i in range (1, len(liste_quan)) :
         
         print(usedData.net(liste_quan[i]) + "\n")
 
     for i in range (1, len(liste_quan)) :
-
-        print(usedData.net(liste_quan[i]) + " : " + usedData.max(usedData.net(liste_quan[i])) )
-    
+        
+        print(usedData.net(liste_quan[i]) + " : " + usedData.max('Sepal.Length' )) 
