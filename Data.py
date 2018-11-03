@@ -81,7 +81,7 @@ class Data:
 
 #Affiche la médiane
     def med(self, variable) :
-        mediane = self.dataframe[variable].max()
+        mediane = self.dataframe[variable].med()
         return (mediane)
     
 #Affiche l'écart type
