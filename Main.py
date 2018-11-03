@@ -59,9 +59,14 @@ def main ():
     liste_quan = usedData.nom_variables_quantitatives()
 
     print(nbr_quan + " : ")
+
+    #plot etc...
     
     for i in range (1, len(liste_quan)) :
         
-        print (usedData.net(liste_quan[i]) + "\n")   
-    
+        print(usedData.net(liste_quan[i]) + "\n")
 
+    for i in range (1, len(liste_quan)) :
+
+        print(usedData.net(liste_quan[i]) + " : " + usedData.max(usedData.net(liste_quan[i])) )
+    
