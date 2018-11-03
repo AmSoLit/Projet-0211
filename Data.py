@@ -76,17 +76,17 @@ class Data:
 
 #Affiche max
     def max(self, variable) :
-        maximum = dataframe[variable].max()
+        maximum = self.dataframe[variable].max()
         return (maximum)
 
 #Affiche la médiane
     def med(self, variable) :
-        mediane = dataframe[variable].max()
+        mediane = self.dataframe[variable].max()
         return (mediane)
     
 #Affiche l'écart type
     def ecart_type(self, variable) :
-        std = dataframe[variable].std()
+        std = self.dataframe[variable].std()
         return (std)
     
     
