@@ -87,7 +87,7 @@ class Data:
             for varqual in self.qual :  
                 counter = self.dataframe[varqual].nunique()
                 modalite = self.dataframe[varqual].unique()
-                print("La variable ", varqual, " possède ", counter, " valeurs possibles : ", modalite )
+                return("La variable "+ str(varqual)+ " possède "+ str(counter)+ " valeurs possibles : "+ str(modalite) )
         except e :
             print(e)
 
