@@ -55,7 +55,7 @@ max_min_etc = df.max_min_etc()
 print("\n")
 
 #Affichage des modalités de la variables qualitatives
-df.nb_valeurs()
+print(df.nb_valeurs())
 print("\n")
 
 #Affichage de la fréquence
@@ -67,20 +67,21 @@ print("\n")
 
 
 df.hist_figure_quantitative()
-print("Histogramme enregistré \n")
+print("Histogramme enregistré à côté du script principal sous le nom de \"plot.pdf\" \n")
 
     
 
 #Si l'utilisateur a dit oui à la proposition de création d'un log
-if ((wantlog == 'o') | (wantlog =='O')):
+if (wantlog.lower() == 'o'):
     
    logpath = os.path.expanduser('~') + "\\Desktop"
    log = LogGenerator(logpath)
    log.ecriture(encoding+"\n")
    log.ecriture(size+"\n")
    log.ecriture("Ce fichier présente " +  str(df.nb_variables()) + " variables et comptabilise " + str(df.nb_observations()) + " observations \n")
-   log.ecriture(str1+"\n")
    log.ecriture(str(type_vari)+"\n")
+   log.ecriture(df.nb_valeurs())
+   log.ecriture(str1+"\n")
    log.ecriture(str(max_min_etc))
     
 elif ((wantlog == 'n') | (wantlog == 'N')) :
@@ -88,6 +89,7 @@ elif ((wantlog == 'n') | (wantlog == 'N')) :
     print ("Aurevoir")
 
 else :
+   
     print ("Je n'ai pas compri!")
 
     
