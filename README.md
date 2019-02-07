@@ -8,3 +8,5 @@ Ce fichier fera automatiquement appel à "main_classique.py" ou "main_interactio
 "LogGenerator.py" est la classe qui permet l'écriture du fichier "log.txt".
 Ce fichier log sera enregistré sur le bureau de l'utilisateur.
 Le fichier "plot.pf" contient un histogramme. Il sera enregistré à côté du script principal.
+
+****Input : chemin du fichier excel à analyser 
